@@ -31,7 +31,7 @@ def off(bot,update):
     value_send = aio.create_data('telebot',value)
 
 
-u = Updater(os.getenv('API key')
+u = Updater(os.getenv('API_key')
 dp = u.dispatcher
 dp.add_handler(CommandHandler('on',on))
 dp.add_handler(CommandHandler('off',off))
