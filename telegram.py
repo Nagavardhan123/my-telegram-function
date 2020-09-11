@@ -1,3 +1,4 @@
+import os
 from telegram.ext import Updater,CommandHandler
 import requests  # Getting the data from the cloud
 
@@ -30,7 +31,7 @@ def off(bot,update):
     value_send = aio.create_data('telebot',value)
 
 
-u = Updater('1304760085:AAELOdXUGwuqO_qD4CVT1jnvtlpISUUWcdQ')
+u = Updater(os.getenv('API key')
 dp = u.dispatcher
 dp.add_handler(CommandHandler('on',on))
 dp.add_handler(CommandHandler('off',off))
